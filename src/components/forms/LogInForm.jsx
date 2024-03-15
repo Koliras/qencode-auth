@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function LogInForm() {
   return (
-    <>
+    <div className='formContainer'>
       <h2 className="formHeading">Log in to your account</h2>
       <div className="oauth">
         <button className="oauthButton">
@@ -46,6 +46,6 @@ export default function LogInForm() {
           Is your company new to Qencode? <Link to='/'>Sign up</Link>
         </p>
       </form>
-    </>
+    </div>
   )
 }
