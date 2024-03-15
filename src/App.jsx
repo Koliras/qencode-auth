@@ -7,6 +7,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import LogInForm from './components/forms/LogInForm';
+import ForgotPassForm from './components/forms/ForgotPassForm';
+import ResetPassForm from './components/forms/ResetPassForm';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Navigate replace to='/login' />} />
         <Route path='/login' element={<LogInForm />} />
+        <Route path='/forgot-pass' element={<ForgotPassForm />} />
+        <Route path='/reset-pass' element={<ResetPassForm />} />
       </Routes>
     </>
   )
