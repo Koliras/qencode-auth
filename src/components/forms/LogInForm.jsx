@@ -21,9 +21,20 @@ export default function LogInForm() {
       <span className='devider'>Or</span>
 
       <form className='form'>
-        <input type="email" required className='input'/>
+        <input
+          type="email"
+          required
+          className='input'
+          placeholder='Work email'
+        />
 
-        <input type="text" required minLength={8} className='input'/>
+        <input
+          type="password"
+          required
+          className='input'
+          minLength={8}
+          placeholder='Password'
+        />
 
         <Link to='/forgot-pass'>Forgot your password?</Link>
 
