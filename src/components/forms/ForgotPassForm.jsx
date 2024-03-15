@@ -1,3 +1,5 @@
+import './form.css';
+
 export default function ForgotPassForm() {
   return (
     <div className="formContainer">
@@ -6,7 +8,7 @@ export default function ForgotPassForm() {
         <input
           type="email"
           required
-          className="input"
+          className="input mb24"
           placeholder="Enter your email"
         />
         <button type="submit" className="submitButton">Send</button>

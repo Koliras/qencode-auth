@@ -1,9 +1,10 @@
+import './form.css';
 
 export default function ResetPassForm() {
   return (
     <div className="formContainer">
       <h2 className="formHeading">Create new Password?</h2>
-      <form>
+      <form className='form'>
         <label>
           Password
           <input
@@ -11,7 +12,7 @@ export default function ResetPassForm() {
             required
             minLength={8}
             placeholder="Password"
-            className="input"
+            className="input mb24"
           />
         </label>
 
@@ -22,7 +23,7 @@ export default function ResetPassForm() {
             required
             minLength={8}
             placeholder="Password"
-            className="input"
+            className="input mb24"
           />
         </label>
 
