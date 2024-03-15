@@ -20,7 +20,7 @@ export default function LogInForm() {
 
       <span className='devider'>Or</span>
 
-      <form>
+      <form className='form'>
         <input type="email" required className='input'/>
 
         <input type="text" required minLength={8} className='input'/>
