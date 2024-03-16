@@ -5,27 +5,29 @@ export default function ResetPassForm() {
     <div className="formContainer">
       <h2 className="formHeading">Create new Password?</h2>
       <form className='form'>
-        <label>
+        <label htmlFor='password' className='label'>
           Password
-          <input
-            type="password"
-            required
-            minLength={8}
-            placeholder="Password"
-            className="input mb24"
-          />
         </label>
+        <input
+          type="password"
+          required
+          minLength={8}
+          placeholder="Password"
+          className="input mb24"
+          id='password'
+        />
 
-        <label>
+        <label htmlFor='repeat' className='label'>
           Confirm password
-          <input
-            type="password"
-            required
-            minLength={8}
-            placeholder="Password"
-            className="input mb24"
-          />
         </label>
+        <input
+          type="password"
+          required
+          minLength={8}
+          placeholder="Password"
+          className="input mb24"
+          id='repeat'
+        />
 
         <button type="submit" className="submitButton">Reset Password</button>
       </form>

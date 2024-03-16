@@ -37,15 +37,15 @@ export default function LogInForm() {
           placeholder='Password'
         />
 
-        <Link to='/forgot-pass' className='mb30'>
+        <Link to='/forgot-pass' className='forgotPass mb30'>
           Forgot your password?
         </Link>
 
-        <button type='submit' className='submitButton'>
+        <button type='submit' className='submitButton mb20'>
           Log in to Qencode
         </button>
         
-        <p>
+        <p className='underlyingText'>
           Is your company new to Qencode? <Link to='/'>Sign up</Link>
         </p>
       </form>

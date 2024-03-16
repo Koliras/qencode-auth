@@ -11,7 +11,7 @@ export default function ForgotPassForm() {
           className="input mb24"
           placeholder="Enter your email"
         />
-        <button type="submit" className="submitButton">Send</button>
+        <button type="submit" className="submitButton mb20">Send</button>
       </form>
       <button className="cancelButton">Cancel</button>
     </div>
