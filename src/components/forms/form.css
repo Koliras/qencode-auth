@@ -107,6 +107,18 @@
   margin-bottom: 0.5rem;
 }
 
+.error {
+  margin-block: 1rem;
+  color: red;
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+}
+
 .mb16 {
   margin-bottom: 1rem;
 }

@@ -8,25 +8,47 @@ import { useState } from 'react';
 export default function LogInForm() {
   const [pass, setPass] = useState('');
   const [email, setEmail] = useState('');
+  const [hasError, setHasError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await AuthAxios.post("/login", {
-      email: email, 
-      password: pass,
-    });
+    setHasError(false);
+    try {
+      const { data } = await AuthAxios.post("/login", {
+        email: email, 
+        password: pass,
+      });
+      AuthAxios.interceptors.request.use(
+        config => {
+          if (!config.headers.Authorization) {
+            config.headers.Authorization = `Bearer ${data.refresh_token}`;
+          }
+          return config;
+        },
+        error => {
+          Promise.reject(error);
+        }
+      )
+    } catch {
+      setHasError(true);
+    }
+
   }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+    setHasError(false);
   }
 
   const handlePassChange = (event) => {
     setPass(event.target.value);
+    setHasError(false);
   }
+
   return (
     <div className='formContainer'>
       <h2 className="formHeading">Log in to your account</h2>
+      {hasError && <div className='error'>Sorry, could not log in</div>}
       <div className="oauth mb30">
         <button className="oauthButton">
           <img src={GoogleLogo} className="oauthIcon"/>
